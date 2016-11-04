@@ -1,0 +1,13 @@
+Yes:
+	Excercise
+	Fruits and Vegetables
+	Yogurt
+	Winter Clothes
+	
+
+No:
+	Smoking
+	Obesity
+	Fast Food
+	Cold temperature
+	Stress
