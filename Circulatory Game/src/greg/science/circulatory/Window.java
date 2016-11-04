@@ -37,7 +37,7 @@ public class Window extends JComponent implements ActionListener, KeyListener, M
 		window.setVisible(true);
 		timer.start();
 
-	    window.addKeyListener(this);
+	    window.addKeyListener(this); 
 	    window.addMouseListener(this);
 	    window.addMouseMotionListener(this);
 	}

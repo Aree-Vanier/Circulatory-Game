@@ -26,7 +26,14 @@ public class Manager {
     }
     
     public void keyUp(KeyEvent e){
-        
+        if(game.gameOver){
+        	if(e.getKeyCode() == KeyEvent.VK_R){
+        		game = new Game(); 
+        	}
+        	if(e.getKeyCode() == KeyEvent.VK_ESCAPE){
+        		System.exit(0);
+        	}
+        }
     }
     
     public void mouseUpdate(MouseEvent m){
