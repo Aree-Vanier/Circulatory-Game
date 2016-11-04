@@ -14,7 +14,7 @@ public class Game {
     int score = 0;
     int lives = 5;
     Random random;
-    int maxOrgans = 10;
+    final int MAX_ORGANS = 9;
     boolean gameOver = false;
     FontMetrics fm;
     final int SCREEN_WIDTH = 640;
@@ -43,7 +43,7 @@ public class Game {
     		g.drawString(go4, SCREEN_WIDTH/2-fm.stringWidth(go4)/2, (int) (50+fm.getHeight()*5));
     	}
     	else{
-	    	if(random.nextInt(150) < score+1 && organs.size() < maxOrgans){    	
+	    	if(random.nextInt(150) < score+1 && organs.size() < MAX_ORGANS){    	
 	    		organs.add(new Organ(1,1,200-(score+1)/2));
 	    	}
 	        for(int i = 0; i < organs.size(); i ++){

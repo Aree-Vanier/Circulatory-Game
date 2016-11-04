@@ -11,3 +11,5 @@ No:
 	Fast Food
 	Cold temperature
 	Stress
+
+	http://www.livestrong.com/article/111570-diseases-disorders-circulatory-system/
