@@ -35,15 +35,15 @@ public class Game {
     		String go1 = "Score:";
     		String go2 = score + " points";
     		String go3 = "Press R to retry";
-    		String go4 = "Press ESCAPE to quit";
+    		String go4 = "Press ESCAPE to quit to menu";
     		g.drawString(go0, SCREEN_WIDTH/2-fm.stringWidth(go0)/2, 50);
     		g.drawString(go1, SCREEN_WIDTH/2-fm.stringWidth(go1)/2, (int) (50+fm.getHeight()*1.25));
     		g.drawString(go2, SCREEN_WIDTH/2-fm.stringWidth(go2)/2, (int) (50+fm.getHeight()*2.5));
     		g.drawString(go3, SCREEN_WIDTH/2-fm.stringWidth(go3)/2, (int) (50+fm.getHeight()*3.75));
-    		g.drawString(go3, SCREEN_WIDTH/2-fm.stringWidth(go4)/2, (int) (50+fm.getHeight()*5));
+    		g.drawString(go4, SCREEN_WIDTH/2-fm.stringWidth(go4)/2, (int) (50+fm.getHeight()*5));
     	}
     	else{
-	    	if(random.nextInt(200) < score+1 && organs.size() < maxOrgans){    	
+	    	if(random.nextInt(150) < score+1 && organs.size() < maxOrgans){    	
 	    		organs.add(new Organ(1,1,200-(score+1)/2));
 	    	}
 	        for(int i = 0; i < organs.size(); i ++){

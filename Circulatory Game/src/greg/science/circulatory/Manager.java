@@ -7,14 +7,17 @@ import java.awt.event.MouseEvent;
 public class Manager {
     
     
-    boolean gameStat = true;
+    boolean gameStat = false;
+    boolean menuStat = true;
     Game game = new Game();
+    Menu menu = new Menu();
     
     public Manager(){        
     }
     
     public void draw(Graphics g){
-    	game.draw(g);
+    	if(gameStat) game.draw(g);
+    	else if(menuStat) menu.draw(g);
     }
     
     public void update(){
@@ -31,12 +34,21 @@ public class Manager {
         		game = new Game(); 
         	}
         	if(e.getKeyCode() == KeyEvent.VK_ESCAPE){
-        		System.exit(0);
+        		menuStat = true;
+        		gameStat = false;
+        		menu = new Menu();
         	}
         }
     }
     
     public void mouseUpdate(MouseEvent m){
-        game.mouseUpdate(m);
+        if(gameStat) game.mouseUpdate(m);
+        else if(menuStat){
+        	if(menu.play.click(m)){
+        		menuStat = false;
+        		gameStat = true;
+        		game = new Game();
+        	}
+        }
     }
 }

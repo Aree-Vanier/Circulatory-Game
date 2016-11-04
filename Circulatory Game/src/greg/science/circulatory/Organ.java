@@ -36,17 +36,17 @@ public class Organ {
         this.x = random.nextInt(640-image.getWidth());
         this.y = random.nextInt(640-image.getHeight());
         System.out.println(image.getWidth());
-        rect = new Rectangle(this.x, this.y, (int)(image.getWidth()), (int)(image.getHeight()));
+        rect = new Rectangle(this.x-1, this.y-1, (int)(image.getWidth())+2, (int)(image.getHeight())+2);
     }
     
     public void draw(Graphics g){
-    	rect.x = x;
-    	rect.y = y;
-    	rect.width = image.getWidth();
-    	rect.height = image.getHeight();
+    	rect.x = x-1;
+    	rect.y = y-1;
+    	rect.width = image.getWidth()+2;
+    	rect.height = image.getHeight()+2;
         g.drawImage(image, x, y, null);
-        g.setColor(Color.RED);
-        g.drawRect(x, y, (int)(rect.getWidth()), (int)(rect.getHeight()));
+        g.setColor(Color.BLACK);
+        g.drawRect(rect.x, rect.y, (int)(rect.getWidth()), (int)(rect.getHeight()));
         lifeTime --;
     }
     
