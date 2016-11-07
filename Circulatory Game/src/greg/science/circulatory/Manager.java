@@ -41,10 +41,11 @@ public class Manager {
         }
     }
     
-    public void mouseUpdate(MouseEvent m){
-        if(gameStat) game.mouseUpdate(m);
+    public void mouseUpdate(MouseEvent e){
+        if(gameStat) game.mouseUpdate(e);
         else if(menuStat){
-        	if(menu.play.click(m)){
+        	menu.mouseClick(e);
+        	if(menu.play.click(e)){
         		menuStat = false;
         		gameStat = true;
         		game = new Game();

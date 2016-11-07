@@ -14,13 +14,15 @@ public class Button {
 	boolean center;
 	Rectangle rect;
 	Color colour;
+	boolean decoration;
 	
-	public Button(String label, int x, int y, boolean center, Color colour){
+	public Button(String label, int x, int y, boolean center, Color colour, boolean decoration){
 		this.label = label;
 		this.x =x;
 		this.y =y;
 		this.center = center;
 		this.colour = colour;
+		this.decoration = decoration;
 		rect = new Rectangle(1,1,1,1);
 	}
 	
@@ -34,7 +36,7 @@ public class Button {
 		rect.height = fm.getHeight() + 2;
 		g.setColor(colour);
 		g.drawString(label, x, y+fm.getHeight()-10);
-		g.drawRect(rect.x, rect.y, (int)(rect.getWidth()), (int)(rect.getHeight()));
+		if(decoration) g.drawRect(rect.x, rect.y, (int)(rect.getWidth()), (int)(rect.getHeight()));
 		g.setColor(old);
 	}
 	
