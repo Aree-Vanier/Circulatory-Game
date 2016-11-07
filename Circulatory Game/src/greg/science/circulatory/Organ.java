@@ -12,9 +12,9 @@ import javax.imageio.ImageIO;
 
 public class Organ {
 	/**The highest possible number for a circulatory organ to have*/
-	public final int MAX_GOOD_TYPE = 3;
+	public final int MAX_GOOD_TYPE = 4;
 	/**The number of images to choose from*/ 
-	private final int IMAGE_COUNT = 8;
+	private final int IMAGE_COUNT = 10;
 	int type;
     BufferedImage image;
     Random random;
