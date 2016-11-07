@@ -46,7 +46,7 @@ public class Game {
 	    	if(random.nextInt(150) < score+1 && organs.size() < MAX_ORGANS){    	
 	    		organs.add(new Organ(1,1,200-(score+1)/2));
 	    	}
-	        for(int i = 0; i < organs.size(); i ++){
+	        for(int i = organs.size()-1; i >= 0; i --){
 	            organs.get(i).draw(g);
 	            if(organs.get(i).lifeTime == 0){
 	            	organs.remove(i);
