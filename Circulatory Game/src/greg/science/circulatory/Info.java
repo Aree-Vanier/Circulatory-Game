@@ -13,7 +13,7 @@ public class Info {
 	Button back = new Button("Back", 2, 10, false, Color.BLACK, false);
 	Button next = new Button("Next", 600, 10, false, Color.BLACK, false);
 	int page = 1;
-	BufferedImage[] images = new BufferedImage[10];
+	BufferedImage[] images = new BufferedImage[11];
 	
 	public Info(){
 		for(int i = 1; i < images.length + 1; i++){
