@@ -30,12 +30,12 @@ public class Info {
 		g.fillRect(0, 0, 1000, 1000);
 		g.drawImage(images[page-1], 640/2 - images[page-1].getWidth()/2, -25, null);
 		back.draw(g, 640);
-		if(page < images.length-1) next.draw(g, 640);
+		if(page < images.length) next.draw(g, 640);
 	}
 
 	public void click(MouseEvent e){
 		if(back.click(e)) page --;
-		if(next.click(e)) page ++;
-		if(page == images.length) page = images.length-1;
+		if(next.click(e) && page < images.length) page ++;
+		if(page == images.length+1) page = images.length-1;
 	}
 }
